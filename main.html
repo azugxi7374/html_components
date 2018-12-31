@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href='main.css'>
+    <script>
+        if (window.location.search.includes('reload')) {
+            setTimeout(() => window.location = window.location, 5000)
+        }
+    </script>
+</head>
+
+<body>
+    <div id='root'>
+
+        <div class='container'>
+            <div class='loading'>
+                <span class='loading_label'>
+                    Loading...
+                </span>
+                <div class='loading_move'></div>
+                <div class='loading_move'></div>
+            </div>
+        </div>
+
+        <div class='gap'></div>
+
+        <div class='container'>
+            <div class='loading2'>
+                <div class='loading2_label'>
+                    Loading...
+                </div>
+                <div class='loading2_move_group'>
+                    <div class='loading2_move'></div>
+                    <div class='loading2_move'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='gap'></div>
+        <div class='container'>
+            <div class='loading3'>
+                Loading...
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

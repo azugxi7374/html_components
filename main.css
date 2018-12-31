@@ -1,0 +1,160 @@
+#root>* {
+  box-sizing: border-box;
+}
+
+.gap {
+  height: 50px;
+}
+
+.container {}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* left: 0px; */
+  /* top: 0px; */
+  width: 120px;
+  height: 120px;
+  /* border: 5px solid green; */
+}
+
+.loading_label {
+  font-weight: bold;
+  color: #555;
+}
+
+.loading_move {
+  position: absolute;
+  margin: auto;
+  /* top: 50%; */
+  /* left: 50%; */
+  width: 80%;
+  height: 80%;
+}
+
+.loading_move:nth-of-type(1) {
+  opacity: 0.5;
+  border: 8px solid #4CAF50;
+  top: -5px;
+  left: -5px;
+  width: 75%;
+  height: 75%;
+  animation: anime_loading_1 1.0s linear 0.2s infinite;
+}
+
+.loading_move:nth-of-type(2) {
+  opacity: 0.5;
+  border: 20px solid #0385f4;
+  top: 0px;
+  left: 0px;
+  animation: anime_loading_1 1.7s linear 0s infinite;
+}
+
+@keyframes anime_loading_1 {
+  0% {
+    transform: rotate(0deg) scale(1.0);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.0);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.0);
+  }
+}
+
+/**************************************/
+
+.loading2 {
+  position: relative;
+  font-size: 24px;
+  width: 8em;
+}
+
+.loading2_label {
+  text-align: center;
+  color: #555;
+}
+
+.loading2_move_group {
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+
+.loading2_move {
+  position: absolute;
+  left: 0px;
+  border-radius: 50%;
+  animation: anime_loading2 1.0s ease 0s infinite;
+}
+
+.loading2_move:nth-of-type(1) {
+  height: 1px;
+  background: #4CAF50;
+}
+
+.loading2_move:nth-of-type(2) {
+  top: 2px;
+  height: 5px;
+  background: #0385f4;
+  animation-delay: 0.3s;
+}
+
+.loading2_move:nth-of-type(3) {
+  /*  background: red; */
+  animation-delay: 0.2s;
+  animation-duration: 0.5s;
+}
+
+@keyframes anime_loading2 {
+  0% {
+    left: 0%;
+    right: 100%;
+  }
+  50% {
+    left: 0%;
+    right: 0%;
+    /*    transform: rotateY(0deg);*/
+  }
+  100% {
+    left: 99%;
+    right: 0%;
+  }
+}
+
+/**************************************/
+
+.loading3 {
+  font-size: 18px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8em;
+  height: 8em;
+  color: #555;
+}
+
+.loading3:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 0.75rem solid #cee0ef;
+  border-top: 1.0rem solid #0385f4;
+  border-radius: 50%;
+  animation: anime_loading3 0.5s linear infinite;
+}
+
+@keyframes anime_loading3 {
+  0% {
+    transform: scaleY(0.5) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(0.5) rotate(360deg);
+  }
+}
